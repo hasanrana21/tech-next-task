@@ -1,0 +1,27 @@
+.action-button button{
+    padding: 7px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+}
+.update-btn{
+    background-color: green;
+    border: 1px solid green;
+    transition: .3s;
+}
+.update-btn:hover{
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+}
+.delete-btn{
+    background-color: crimson;
+    border: 1px solid crimson;
+    transition: .3s;
+}
+.delete-btn:hover{
+    background-color: white;
+    border: 1px solid crimson;
+    color: crimson;
+}

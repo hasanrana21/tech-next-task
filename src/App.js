@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,10 +8,14 @@ import {
 import Navbar from './Components/Shared/Navbar/Navbar';
 import Home from './Components/HomePage/Home/Home';
 import LoadMore from './Components/HomePage/LoadMore/LoadMore';
+import Profile from './Components/UserProfilePage/Profile/Profile';
+
+export const PostsContext = createContext();
 
 function App() {
+  const [globalPosts, setGlobalPosts] = useState([]);
   return (
-    <div className="App">
+    <PostsContext.Provider value={[globalPosts, setGlobalPosts]}>
       <Router>
         <Navbar></Navbar>
         <Switch>
@@ -24,12 +28,16 @@ function App() {
           <Route path="/loadMore">
             <LoadMore/>
           </Route>
+          <Route path="/profile">
+            <Profile></Profile>
+          </Route>
+
           <Route path="/">
             <Home></Home>
           </Route>
         </Switch>
-    </Router>
-    </div>
+      </Router>
+    </PostsContext.Provider>
   );
 }
 
