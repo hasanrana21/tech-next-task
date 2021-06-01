@@ -1,0 +1,12 @@
+.post-card{
+    width: 30%;
+    margin: 2% 1%;
+    padding: 20px 30px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    transition: .3s;
+}
+.post-card:hover{
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, .4);
+    border-color: white;
+}
