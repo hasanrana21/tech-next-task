@@ -10,3 +10,9 @@
     box-shadow: 7px 7px 15px rgba(0, 0, 0, .4);
     border-color: white;
 }
+.post-card h6{
+    transition: .3s;
+}
+.post-card:hover h6{
+    letter-spacing: 10px;
+}

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Navbar from './Components/Shared/Navbar/Navbar';
 import Home from './Components/HomePage/Home/Home';
+import LoadMore from './Components/HomePage/LoadMore/LoadMore';
 
 function App() {
   return (
@@ -14,11 +15,14 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <Switch>
-          <Route path="/about">
+          <Route path="/post">
             
           </Route>
           <Route path="/users">
             
+          </Route>
+          <Route path="/loadMore">
+            <LoadMore/>
           </Route>
           <Route path="/">
             <Home></Home>

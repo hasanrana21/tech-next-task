@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PostDetails from '../PostDetails/PostDetails';
 
 const Post = () => {
@@ -14,11 +15,11 @@ const Post = () => {
     return (
         <div className="row">
             {
-                posts.map(post => <PostDetails post={post}></PostDetails>)
+                posts.map(post => <PostDetails post={post} key={post.id}></PostDetails>)
             }
-            <div className="text-center primary-button">
-                <button className="" style={{backgroundColor: 'red', border: 'none', padding: '5px 15px', borderRadius: '3px', color: 'white', fontWeight: '500'}}>Load More...</button>
-            </div>
+            <Link to="/loadMore" className="text-center primary-button">
+                <button style={{backgroundColor: 'red', border: 'none', padding: '5px 15px', borderRadius: '3px', color: 'white', fontWeight: '500'}}>Load More...</button>
+            </Link>
         </div>
     );
 };

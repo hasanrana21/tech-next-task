@@ -1,8 +1,8 @@
 import React from 'react';
-import './PostDetails.css';
+import './LoadMoreDetails.css';
 
-const PostDetails = (props) => {
-    const {id, title, body} = props.post;
+const LoadMoreDetails = (props) => {
+    const { id, title, body } = props.more;
     return (
         <div className="col-md-4 post-card">
             <h6>User: {id}</h6>
@@ -12,4 +12,4 @@ const PostDetails = (props) => {
     );
 };
 
-export default PostDetails;
+export default LoadMoreDetails;
