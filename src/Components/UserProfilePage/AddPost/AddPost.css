@@ -1,0 +1,41 @@
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 4px;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #111;
+    font-size: 16px;
+    font-weight: 400;
+  }
+textarea{
+    border-radius: 5px;
+    padding-left: 15px;
+}
+.add-post{
+    width: 950px;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+.submit-button{
+    border: none;
+    background-color: green;
+    padding: 10px 40px;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 15%;
+    margin-top: 15px;
+}

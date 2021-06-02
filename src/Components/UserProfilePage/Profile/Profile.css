@@ -1,0 +1,17 @@
+.dashboard-button{
+    background-color:gray;
+    height: 90vh;
+    width: 12%;
+    padding: 20px;
+}
+.dashboard-button button{
+    color: white;
+    font-size: 21px;
+    margin-top: 30px;
+}
+.dashboard-button button:focus{
+    background-color: green !important;
+}
+.dashboard-button button:target{
+    background-color: none !important;
+}

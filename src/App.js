@@ -9,6 +9,7 @@ import Navbar from './Components/Shared/Navbar/Navbar';
 import Home from './Components/HomePage/Home/Home';
 import LoadMore from './Components/HomePage/LoadMore/LoadMore';
 import Profile from './Components/UserProfilePage/Profile/Profile';
+import UsersPostDetails from './Components/UserProfilePage/UsersPostDetails/UsersPostDetails';
 
 export const PostsContext = createContext();
 
@@ -18,12 +19,13 @@ function App() {
     <PostsContext.Provider value={[globalPosts, setGlobalPosts]}>
       <Router>
         <Navbar></Navbar>
+
         <Switch>
           <Route path="/post">
             
           </Route>
-          <Route path="/users">
-            
+          <Route path="/usersPostDetails/:postID">
+            <UsersPostDetails />
           </Route>
           <Route path="/loadMore">
             <LoadMore/>
@@ -35,6 +37,7 @@ function App() {
           <Route path="/">
             <Home></Home>
           </Route>
+
         </Switch>
       </Router>
     </PostsContext.Provider>
