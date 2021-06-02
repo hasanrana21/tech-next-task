@@ -10,6 +10,7 @@ import Home from './Components/HomePage/Home/Home';
 import LoadMore from './Components/HomePage/LoadMore/LoadMore';
 import Profile from './Components/UserProfilePage/Profile/Profile';
 import UsersPostDetails from './Components/UserProfilePage/UsersPostDetails/UsersPostDetails';
+import EditPost from './Components/UserProfilePage/EditPost/EditPost';
 
 export const PostsContext = createContext();
 
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile></Profile>
+          </Route>
+          <Route path="/editPost/:postEditId">
+            <EditPost></EditPost>
           </Route>
 
           <Route path="/">

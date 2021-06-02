@@ -15,6 +15,7 @@ const UserPosts = () => {
             {
                 globalPosts.map(post => 
                     <div className="col-md-4 post-card" key={post.id}>
+                        <small>{post.id}</small>
                         <h6 className="fw-bold text-center fs-5" style={{color: 'green'}}>User: {post.userId}</h6>
                         <h5>{post.title}</h5>
                         <p>{post.body}</p>
