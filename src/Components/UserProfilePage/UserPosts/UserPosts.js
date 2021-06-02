@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const UserPosts = () => {
     const [globalPosts, setGlobalPosts] = useContext(PostsContext);
-    console.log(globalPosts);
+    // console.log(globalPosts);
 
     const handleUpdate = (event) => {
         

@@ -17,7 +17,7 @@ const Post = () => {
     return (
         <div className="row">
             {
-                posts.map(post => <PostDetails post={post} key={post.id}></PostDetails>)
+                posts.map((post, index) => <PostDetails post={post} key={index}></PostDetails>)
             }
             <Link to="/loadMore" className="text-center primary-button">
                 <button style={{backgroundColor: 'crimson', border: 'none', padding: '5px 15px', borderRadius: '3px', color: 'white', fontWeight: '500'}}>Load More...</button>
