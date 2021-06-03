@@ -11,6 +11,7 @@ import LoadMore from './Components/HomePage/LoadMore/LoadMore';
 import Profile from './Components/UserProfilePage/Profile/Profile';
 import UsersPostDetails from './Components/UserProfilePage/UsersPostDetails/UsersPostDetails';
 import EditPost from './Components/UserProfilePage/EditPost/EditPost';
+import Users from './Components/AllUsersPage/Users/Users';
 
 export const PostsContext = createContext();
 
@@ -22,8 +23,8 @@ function App() {
         <Navbar></Navbar>
 
         <Switch>
-          <Route path="/post">
-            
+          <Route path="/users">
+            <Users/>
           </Route>
           <Route path="/usersPostDetails/:postID">
             <UsersPostDetails />

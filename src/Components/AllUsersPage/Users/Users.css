@@ -1,0 +1,31 @@
+#all-users-section{
+    /* width: 500px; */
+    margin: 0 auto;
+}
+#all-users-section table{
+    width: 900px;
+    margin:0 auto;
+}
+#all-users-section table th{
+    border: 1px solid gray;
+    padding: 10px 15px;
+    background-color: green;
+    font-size: 18px;
+    color: white;
+}
+#all-users-section table td{
+    border: 1px solid gray;
+    padding: 10px 15px;
+}
+#all-users-section table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#all-users-section table tr:hover{
+    background-color: #ddd;
+}
+#all-users-section table tr td:nth-child(1){
+    cursor: pointer;
+}
+#all-users-section table tr td a{
+    text-decoration: none;
+}
