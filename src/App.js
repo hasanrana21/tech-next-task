@@ -12,6 +12,7 @@ import Profile from './Components/UserProfilePage/Profile/Profile';
 import UsersPostDetails from './Components/UserProfilePage/UsersPostDetails/UsersPostDetails';
 import EditPost from './Components/UserProfilePage/EditPost/EditPost';
 import Users from './Components/AllUsersPage/Users/Users';
+import AllUserInfo from './Components/AllUsersPage/AllUserInfo/AllUserInfo';
 
 export const PostsContext = createContext();
 
@@ -33,10 +34,13 @@ function App() {
             <LoadMore/>
           </Route>
           <Route path="/profile">
-            <Profile></Profile>
+            <Profile/>
           </Route>
           <Route path="/editPost/:postEditId">
-            <EditPost></EditPost>
+            <EditPost/>
+          </Route>
+          <Route path="/allUserInfo/:id">
+            <AllUserInfo/>
           </Route>
 
           <Route path="/">

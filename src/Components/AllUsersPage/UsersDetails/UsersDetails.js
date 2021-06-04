@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom';
 import './UsersDetails.css';
 
 const UsersDetails = (props) => {
-    const { name, email, website } = props.users;
+    const { name, email, website, id } = props.users;
     return (
-            <tr>
-                <td>
-                    <Link to="/userPosts">
-                        {name}
-                    </Link>
-                </td>
-                <td>{email}</td>
-                <td>{website}</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <Link to={`/allUserInfo/${id}`}>
+                            {name}
+                        </Link>
+                    </td>
+                    <td>{email}</td>
+                    <td>{website}</td>
+                </tr>
+            </tbody>
     );
 };
 

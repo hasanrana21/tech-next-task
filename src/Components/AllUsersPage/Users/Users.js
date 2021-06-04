@@ -16,14 +16,16 @@ const Users = () => {
     return (
             <div id="all-users-section">
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Website</th>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Website</th>
+                        </tr>
+                    </tbody>
                     
                     {
-                        allUsers.map(users => <UsersDetails users={users}></UsersDetails>)
+                        allUsers.map((users, index) => <UsersDetails users={users} key={index}></UsersDetails>)
                     }
                 </table>
             </div>

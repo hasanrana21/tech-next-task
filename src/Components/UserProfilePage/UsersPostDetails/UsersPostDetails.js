@@ -23,18 +23,7 @@ const UsersPostDetails = () => {
     let usersComments = allComments.filter(singleComment => singleComment?.postId === userPost?.userId);
     // console.log(usersComments);
 
-    const handleDelete = async (id) => {
-        const deletedPost = globalPosts.filter((postDelete) => {
-            return postDelete.id !== id;
-        })
-        setGlobalPosts(deletedPost);
-    }
-
-    const handleUpdate = async (updateID) => {
-        const updatedPost = globalPosts.filter((postUpdate) => {
-            return postUpdate.id === updateID;
-        })
-    }
+    
     return (
         <div className="single-post-section">
             <div className="single-post-details">
@@ -44,12 +33,7 @@ const UsersPostDetails = () => {
                 </div>
                 <h3>{userPost?.title}</h3>
                 <h5>{userPost?.body}</h5>
-                <div className="action-button d-flex justify-content-between">
-                    <Link to={`/editPost/${userPost?.id}`}>
-                        <button className="update-btn" onClick={() => handleUpdate(userPost?.id)}>Update</button>
-                    </Link>
-                    <button className="delete-btn" onClick={() => handleDelete(userPost?.id)}>Delete</button>
-                </div>
+                
             </div>
             <div className="post-comments">
                 <h4 style={{marginLeft: '-30px', marginTop: '25px'}}>Comments</h4>
