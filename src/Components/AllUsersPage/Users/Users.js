@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import UsersDetails from '../UsersDetails/UsersDetails';
 import './Users.css';
 
 const Users = () => {
     const [allUsers, setAllUsers] = useState([]);
+    const [loadData, setLoadData] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            setAllUsers(data);
+            setAllUsers(data.slice(0, 3));
+            setLoadData(data);
         })
     }, [])
     return (
@@ -18,6 +22,7 @@ const Users = () => {
                 <table>
                     <tbody>
                         <tr>
+                            <th>Id</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Website</th>
@@ -28,6 +33,10 @@ const Users = () => {
                         allUsers.map((users, index) => <UsersDetails users={users} key={index}></UsersDetails>)
                     }
                 </table>
+                
+                <Link to="/users">
+                    <button>Next</button>
+                </Link>
             </div>
     );
 };

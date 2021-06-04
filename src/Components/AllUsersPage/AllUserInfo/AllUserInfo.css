@@ -1,0 +1,11 @@
+.user-info-card{
+    width: 450px;
+    margin: 30px auto;
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color:green;
+    color: #fff;
+    text-align:center;
+    box-shadow: 10px 10px 20px green;
+    font-weight: 700;
+}

@@ -7,6 +7,7 @@ const UsersDetails = (props) => {
     return (
             <tbody>
                 <tr>
+                    <td>{id}</td>
                     <td>
                         <Link to={`/allUserInfo/${id}`}>
                             {name}

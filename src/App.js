@@ -13,16 +13,17 @@ import UsersPostDetails from './Components/UserProfilePage/UsersPostDetails/User
 import EditPost from './Components/UserProfilePage/EditPost/EditPost';
 import Users from './Components/AllUsersPage/Users/Users';
 import AllUserInfo from './Components/AllUsersPage/AllUserInfo/AllUserInfo';
+import UserPosts from './Components/UserProfilePage/UserPosts/UserPosts';
 
 export const PostsContext = createContext();
 
 function App() {
   const [globalPosts, setGlobalPosts] = useState([]);
+  // const [allGlobalUsers, setAllGlobalUsers] = useState([]);
   return (
     <PostsContext.Provider value={[globalPosts, setGlobalPosts]}>
       <Router>
         <Navbar></Navbar>
-
         <Switch>
           <Route path="/users">
             <Users/>
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/allUserInfo/:id">
             <AllUserInfo/>
+          </Route>
+          <Route path="/userPosts">
+            <UserPosts/>
           </Route>
 
           <Route path="/">
