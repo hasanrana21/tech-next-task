@@ -5,6 +5,7 @@ import PostDetails from '../PostDetails/PostDetails';
 
 const Post = () => {
     const [globalPosts, setGlobalPosts] = useContext(PostsContext);
+    localStorage.setItem("postInfo", globalPosts)
     const [posts, setPosts] = useState([]);
     useEffect(()=> {
         fetch('https://jsonplaceholder.typicode.com/posts')

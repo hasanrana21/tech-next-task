@@ -13,8 +13,14 @@ const UsersDetails = (props) => {
                             {name}
                         </Link>
                     </td>
-                    <td>{email}</td>
-                    <td>{website}</td>
+                    <td>
+                        <Link to={`/allUserInfo/${id}`}>
+                            {email}
+                        </Link></td>
+                    <td>
+                        <Link to={`/allUserInfo/${id}`}>
+                            {website}
+                        </Link></td>
                 </tr>
             </tbody>
     );

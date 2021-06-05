@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import { PostsContext } from '../../../App';
 import './UserPosts.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const UserPosts = () => {
     const [globalPosts, setGlobalPosts] = useContext(PostsContext);
-    // console.log(globalPosts);
 
     const handleDelete = async (id) => {
         const deletedPost = globalPosts.filter((postDelete) => {
@@ -16,7 +15,7 @@ const UserPosts = () => {
         setGlobalPosts(deletedPost);
     }
 
-    // const handleUpdate = async (updateID) => {
+    // const handleUpdate = (updateID) => {
     //     fetch(`https://jsonplaceholder.typicode.com/posts/${updateID}`, {
     //         method: 'PUT',
     //         headers: {
@@ -38,7 +37,7 @@ const UserPosts = () => {
                             </div>
                             <div className="action-button">
                                 <Link to={`/editPost/${post?.id}`}>
-                                    <button className="update-btn"> <FontAwesomeIcon icon={faEdit}/> </button>
+                                    <button className="update-btn" > <FontAwesomeIcon icon={faEdit}/> </button>
                                 </Link>
                                 <button className="delete-btn" onClick={() => handleDelete(post?.id)}> <FontAwesomeIcon icon={faTrash}/> </button>
                             </div>

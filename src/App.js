@@ -14,6 +14,7 @@ import EditPost from './Components/UserProfilePage/EditPost/EditPost';
 import Users from './Components/AllUsersPage/Users/Users';
 import AllUserInfo from './Components/AllUsersPage/AllUserInfo/AllUserInfo';
 import UserPosts from './Components/UserProfilePage/UserPosts/UserPosts';
+import Login from './Components/Shared/Login/Login';
 
 export const PostsContext = createContext();
 
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/userPosts">
             <UserPosts/>
+          </Route>
+          <Route path="/login">
+            <Login/>
           </Route>
 
           <Route path="/">

@@ -6,17 +6,18 @@ import './Users.css';
 const Users = () => {
     const [allUsers, setAllUsers] = useState([]);
     const [loadData, setLoadData] = useState([]);
-    const history = useHistory();
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            setAllUsers(data.slice(0, 3));
-            setLoadData(data);
+            setAllUsers(data);
+            // setLoadData(data.slice(3, 8));
         })
     }, [])
+    // const pageLoad2 = loadData.map(page2 => page2);
+    // console.log(pageLoad2)
     return (
             <div id="all-users-section">
                 <table>
@@ -34,9 +35,13 @@ const Users = () => {
                     }
                 </table>
                 
-                <Link to="/users">
-                    <button>Next</button>
-                </Link>
+                {/* <div className="container my-5">
+                    <ul className="pagination justify-content-center">
+                        <li className="page-item mx-2"> <a className="page-link" href="/">1</a> </li>
+                        <li className="page-item mx-2"> <a className="page-link" href={pageLoad2}>2</a> </li>
+                        <li className="page-item mx-2"> <a className="page-link" href="/">3</a> </li>
+                    </ul>
+                </div> */}
             </div>
     );
 };
